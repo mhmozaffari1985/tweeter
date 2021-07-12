@@ -1,0 +1,24 @@
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > span {
+  font-family: 'Bungee', cursive;  
+ }
+
+ nav > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+ }
+ nav > div > i {
+   color: red;
+ }
