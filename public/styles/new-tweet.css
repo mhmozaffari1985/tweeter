@@ -1,35 +1,35 @@
 .new-tweet {
-    padding: 0em 2em 0em 2em;
+  margin: 2%;
 }
 
 .new-tweet>form>textarea {
-    width: 100%;
-    border: none;
-    background-color: #f4f1ec;
-    border-bottom: 2px solid #545149;
+  width: 100%;
+  border: none;
+  background-color: #f4f1ec;
+  border-bottom: 2px solid #545149;
 }
 
 .new-tweet>form>textarea::placeholder {
-    color: #545149;
-    font-weight: bold;
-    font-size: 24px;
+  color: #545149;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 .new-tweet>form>div {
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Bungee', cursive;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
 }
 
 .new-tweet>form>div>button {
-    background-color: #4056A1;
-    color: #FFFFFF;
+  background-color: #4056A1;
+  color: #FFFFFF;
 }
 
 .counterPositive {
-    color: #545149;
+  color: #545149;
 }
 
 .counterNegative {
-    color: red;
+  color: red;
 }
