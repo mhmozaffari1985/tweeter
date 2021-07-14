@@ -8,19 +8,20 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  z-index: 2;
+  position: fixed;
+  top: 0;
 }
 
-nav > span {
+nav>span {
   font-family: 'Bungee', cursive;
- }
+}
 
- nav > div {
+nav>div {
   display: flex;
   align-items: center;
   flex-direction: column;
- }
- nav > div > i {
-   color: red;
- }
+}
+
+nav>div>i {
+  color: red;
+}

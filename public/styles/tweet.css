@@ -3,6 +3,10 @@
     border: 3px solid;
   }
   
+  .tweets article:hover {
+    box-shadow: 5px 5px grey;
+  }
+  
   .tweets article header {
     display: flex;
     flex-direction: row;
