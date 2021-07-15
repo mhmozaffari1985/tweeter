@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   $("#new-tweet-text").keyup(function() {
     $(".counter").html(140 - this.value.length);
     if (this.value.length > 140) {

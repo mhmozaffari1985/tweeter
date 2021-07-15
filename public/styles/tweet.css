@@ -1,21 +1,21 @@
-  .tweets article {
+  #tweets-container article {
     margin: 2%;
     border: 3px solid;
   }
   
-  .tweets article:hover {
+  #tweets-container article:hover {
     box-shadow: 5px 5px grey;
   }
   
-  .tweets article header {
+  #tweets-container article header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
   
-  .tweets article header div {
-    width: 35%;
+  #tweets-container article header div {
+    width: 30%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -23,16 +23,17 @@
   }
   
   .tweetsAvatar {
-    border-radius: 50%;
+    /*border-radius: 50%;
     border: 1px solid;
+    */
     height: 100px;
   }
   
-  .tweets article label {
+  #tweets-container article label {
     margin: 30px;
   }
   
-  .tweets article div {
+  #tweets-container article div {
     padding-top: 1%;
     padding-right: 3%;
     padding-bottom: 1%;
@@ -48,10 +49,23 @@
     padding-left: 10px;
   }
   
-  .tweets article footer {
+  #tweets-container article footer {
     margin-left: 1%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  
+  #tweets-container article footer div {
+    width: 20%;
+    margin-left: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #tweets-container article footer div i:hover {
+    color: rgb(182, 146, 46);
   }
