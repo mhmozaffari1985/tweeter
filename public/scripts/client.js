@@ -89,8 +89,9 @@ $(document).ready(function() {
       $("#errors-container").html('Too long! It should be limited to 140 characters.');
       $("#errors-container").show();
     } else {
-
-      $.post("/tweets", $(".new-tweet-form").serialize());
+      let input = $("<div>").text($('#new-tweet-text').val());
+      $.post("/tweets", input);
+      //$.post("/tweets", $(".new-tweet-form").serialize());
       window.location.reload();
     }
   });
