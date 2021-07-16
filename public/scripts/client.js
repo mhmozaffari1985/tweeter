@@ -90,7 +90,7 @@ $(document).ready(function() {
       $("#errors-container").show();
     } else {
       let input = $("<div>").text($('#new-tweet-text').val());
-      $.post("/tweets", input);
+      $.post("/tweets", "text=" + input[0].innerHTML);
       //$.post("/tweets", $(".new-tweet-form").serialize());
       window.location.reload();
     }

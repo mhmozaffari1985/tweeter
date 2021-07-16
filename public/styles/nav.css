@@ -7,6 +7,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #4056A1;
 }
 
 nav>span {
@@ -36,5 +37,11 @@ nav>div>a>i {
   }
   100% {
     top: 0px;
+  }
+}
+
+@media screen and (max-width:1023px) {
+  nav {
+    background-image: url("../images/back-pattern.png");
   }
 }

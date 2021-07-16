@@ -1,18 +1,29 @@
-body>div {
-  width: 100%;
-  height: 500px;
-  background-image: url("../images/back-pattern.png");
-  color: #FFFFFF;
-  position: fixed;
-  top: 0;
-}
-
-body>div>header {
-  width: 100%;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #FFFFFF;
-}
+  /* body>div {
+    width: 100%;
+    height: 500px;
+    background-image: url("../images/back-pattern.png");
+    color: #FFFFFF;
+    position: fixed;
+    top: 0;
+  } */
+  
+  body>header {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    background-image: url("../images/back-pattern.png");
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    body>header {
+      float: left;
+      width: 34vw;
+      margin-top: 2em;
+      margin-left: 2vw;
+      padding-top: 50px;
+    }
+  }

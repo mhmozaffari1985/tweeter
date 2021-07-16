@@ -34,7 +34,16 @@ body {
 main {
   width: 100%;
   text-align: center;
-  margin-top: 520px;
+  /* margin-top: 520px; */
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    width: 60vw;
+    float: right;
+    margin-top: 2em;
+    margin-left: 2vw;
+  }
 }
 
 .backToTop {
