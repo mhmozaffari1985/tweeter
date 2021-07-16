@@ -51,12 +51,15 @@ const loadtweets = function() {
 
 $(document).ready(function() {
   loadtweets();
+
   $(".new-tweet-form").submit(function(event) {
     event.preventDefault();
     if ($("#new-tweet-text").val().length === 0) {
-      alert('The tweet is empty!');
+      $("#errors-container").html('The tweet is empty! Please type something!');
+      $("#errors-container").show();
     } else if ($("#new-tweet-text").val().length > 140) {
-      alert('Too long! It should be limited to 140 characters.');
+      $("#errors-container").html('Too long! It should be limited to 140 characters.');
+      $("#errors-container").show();
     } else {
       $('#new-tweet-error').text('');
 

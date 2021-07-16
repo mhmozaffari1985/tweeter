@@ -69,3 +69,10 @@
   #tweets-container article footer div i:hover {
     color: rgb(182, 146, 46);
   }
+  
+  #errors-container {
+    color: red;
+    margin: 2%;
+    border: 3px solid;
+    display: none;
+  }
