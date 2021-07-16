@@ -1,6 +1,7 @@
 /* #tweets-container {
   margin-top: 120 px;
 } */
+
 #tweets-container article {
   margin: 2%;
   border: 3px solid;
@@ -70,7 +71,7 @@
 }
 
 #tweets-container article footer div i:hover {
-  color: #b6922e;
+  color: rgb(182, 146, 46);
 }
 
 #errors-container {

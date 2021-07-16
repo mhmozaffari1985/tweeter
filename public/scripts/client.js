@@ -29,12 +29,13 @@
 //   }
 // ];
 
+//Create html Tweet Element
 const createTweetElement = function(tweet) {
-
-  let $tweet = `<article><header><div><img src="${tweet['user']['avatars']}" alt="Avatar" class="tweetsAvatar" /><span>${tweet['user']['name']}</span></div><label>@${tweet['user']['handle']}</label></header><div class="content"><div id="tweet-text">${tweet['content']['text']}</div></div><footer><label>${timeago.format(tweet['created_at'])}</label><div><i class="fas fa-flag "></i><i class="fas fa-heart "></i><i class="fas fa-retweet "></i></div></footer></article>`;
+  let $tweet = `<article><header><div><img src="${tweet['user']['avatars']}" alt="Avatar" class="tweetsAvatar" /><span>${tweet['user']['name']}</span></div><label>${tweet['user']['handle']}</label></header><div class="content"><div id="tweet-text">${tweet['content']['text']}</div></div><footer><label>${timeago.format(tweet['created_at'])}</label><div><i class="fas fa-flag "></i><i class="fas fa-heart "></i><i class="fas fa-retweet "></i></div></footer></article>`;
   return $tweet;
 };
 
+//Processing tweets
 const renderTweets = function(tweets) {
   for (let tweet of tweets) {
     let $tweet = createTweetElement(tweet);
@@ -42,6 +43,7 @@ const renderTweets = function(tweets) {
   }
 };
 
+//Fetching tweets from DB
 const loadtweets = function() {
   $.getJSON('/tweets', function(tweetsdata) {
     let sortedTweets = tweetsdata.sort((a, b) => a.created_at > b.created_at && -1 || 1);
@@ -49,19 +51,19 @@ const loadtweets = function() {
   });
 };
 
+
+//doing something
 $(document).ready(function() {
+  //Fetching tweets from DB
   loadtweets();
 
+  //adding Compose button action
   document.querySelector(".atag").addEventListener("click", (e) => {
     e.preventDefault();
-    $("#tweets-container").focus();
-    window.scroll({
-      top: 120,
-      left: 0,
-      behavior: "smooth"
-    });
+    $(".new-tweet").toggle();
   });
 
+  //adding second toggle button action(backToTop)
   $('.backToTop').click(function() {
     window.scroll({
       top: 0,
@@ -70,6 +72,7 @@ $(document).ready(function() {
     });
   });
 
+  //hide and unhide second toggle button action(backToTop)
   $(document).scroll(function() {
 
     /* If we're not at the top of the browser */
@@ -80,6 +83,8 @@ $(document).ready(function() {
       $('.backToTop').hide();
     }
   });
+
+  //new tweet submit with error handling
   $(".new-tweet-form").submit(function(event) {
     event.preventDefault();
     if ($("#new-tweet-text").val().length === 0) {

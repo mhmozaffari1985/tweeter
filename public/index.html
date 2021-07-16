@@ -33,10 +33,11 @@
   <nav>
     <span>tweeter</span>
     <div>
-      <span><strong>Write</strong> a new tweet</span>
+      <p><strong>Write</strong> a new tweet</p>
       <a href="#" class="atag"><i class="fas fa-angle-double-down"></i></a>
     </div>
   </nav>
+  <!-- Header (fixed) -->
   <header>
     <div>
       <img src="/images/profile-hex.png">
@@ -51,6 +52,7 @@
     <div id="errors-container">
       Error
     </div>
+    <!-- new tweet form -->
     <section class="new-tweet">
       <form action="/tweets/" method="POST" class="new-tweet-form">
         <!-- <label for="tweet-text">What are you humming about?</label> -->
@@ -61,54 +63,10 @@
         </div>
       </form>
     </section>
+    <!-- tweets showing -->
     <section id="tweets-container">
-
-      <!-- <article>
-        <header>
-          <div>
-            <img src="/images/avatars/cadaei-01.png" alt="Avatar" class="tweetsAvatar" />
-            <span>Francis Bourgouin</span>
-          </div>
-          <label>@cadaei</label>
-        </header>
-
-        <div class="content">
-          <div id="tweet-text">Hello World!</div>
-        </div>
-
-        <footer>
-          <label>2 days ago</label>
-          <div>
-            <i class="fas fa-flag "></i>
-            <i class="fas fa-heart "></i>
-            <i class="fas fa-retweet "></i>
-          </div>
-        </footer>
-      </article>
-
-      <article>
-        <header>
-          <div>
-            <img src="/images/avatars/cadaei-01.png" alt="Avatar" class="tweetsAvatar" />
-            <span>Francis Bourgouin</span>
-          </div>
-          <label>@cadaei</label>
-        </header>
-
-        <div class="content">
-          <div id="tweet-text">Hello World!</div>
-        </div>
-
-        <footer>
-          <label>2 days ago</label>
-          <div>
-            <i class="fas fa-flag "></i>
-            <i class="fas fa-heart "></i>
-            <i class="fas fa-retweet "></i>
-          </div>
-        </footer>
-      </article>-->
     </section>
+    <!-- back to top button -->
     <i class="fas fa-angle-double-up backToTop hidden"></i>
   </main>
 </body>

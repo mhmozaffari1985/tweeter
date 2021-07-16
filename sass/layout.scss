@@ -3,6 +3,7 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
   box-sizing: border-box;
 }
@@ -13,25 +14,30 @@ html {
   box-sizing: inherit;
 }
 
+
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
 main {
   width: 100%;
   text-align: center;
   padding-top: 520px;
 }
 
+//Desktop View
 @media only screen and (min-width: 1024px) {
   main {
     width: 60vw;
@@ -40,6 +46,7 @@ main {
     padding-top: 140px;
   }
 }
+
 .backToTop {
   position: fixed;
   bottom: 4vmin;

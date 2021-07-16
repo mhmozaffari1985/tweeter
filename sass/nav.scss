@@ -9,22 +9,23 @@ nav {
   align-items: center;
   position: fixed;
   top: 0;
+  // background-color: #4056A1;
   background-color: #a6b6e9;
-}
-nav span {
-  font-family: "Bungee", cursive;
-}
-nav div {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-nav div a i {
-  color: red;
-  position: relative;
-  animation-name: example;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
+  span {
+    font-family: "Bungee", cursive;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    a i {
+      color: red;
+      position: relative;
+      animation-name: example;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+  }
 }
 
 @keyframes example {
@@ -38,6 +39,8 @@ nav div a i {
     top: 0px;
   }
 }
+
+//Mobile View
 @media screen and (max-width: 1023px) {
   nav {
     background-image: url("../images/back-pattern.png");
