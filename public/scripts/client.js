@@ -53,8 +53,16 @@ $(document).ready(function() {
   loadtweets();
   $(".new-tweet-form").submit(function(event) {
     event.preventDefault();
-    $.post("/tweets", $(".new-tweet-form").serialize());
-    window.location.reload();
+    if ($("#new-tweet-text").val().length === 0) {
+      alert('The tweet is empty!');
+    } else if ($("#new-tweet-text").val().length > 140) {
+      alert('Too long! It should be limited to 140 characters.');
+    } else {
+      $('#new-tweet-error').text('');
+
+      $.post("/tweets", $(".new-tweet-form").serialize());
+      window.location.reload();
+    }
   });
 });
 
