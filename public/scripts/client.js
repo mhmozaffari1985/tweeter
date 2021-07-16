@@ -52,6 +52,34 @@ const loadtweets = function() {
 $(document).ready(function() {
   loadtweets();
 
+  document.querySelector(".atag").addEventListener("click", (e) => {
+    e.preventDefault();
+    $("#tweets-container").focus();
+    window.scroll({
+      top: 120,
+      left: 0,
+      behavior: "smooth"
+    });
+  });
+
+  $('.backToTop').click(function() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+  });
+
+  $(document).scroll(function() {
+
+    /* If we're not at the top of the browser */
+    if ($(window).scrollTop() !== 0) {
+      $('.backToTop').show();
+      /* If we're at the top of the browser */
+    } else {
+      $('.backToTop').hide();
+    }
+  });
   $(".new-tweet-form").submit(function(event) {
     event.preventDefault();
     if ($("#new-tweet-text").val().length === 0) {
@@ -61,7 +89,6 @@ $(document).ready(function() {
       $("#errors-container").html('Too long! It should be limited to 140 characters.');
       $("#errors-container").show();
     } else {
-      $('#new-tweet-error').text('');
 
       $.post("/tweets", $(".new-tweet-form").serialize());
       window.location.reload();
