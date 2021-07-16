@@ -45,6 +45,12 @@ const renderTweets = function(tweets) {
 
 $(document).ready(function() {
   renderTweets(data);
+  $(".new-tweet-form").submit(function(event) {
+    event.preventDefault();
+
+    $.post("/tweets", $(".new-tweet-form").serialize());
+    window.location.reload();
+  });
 });
 
 // const $tweet = createTweetElement(tweetData);
